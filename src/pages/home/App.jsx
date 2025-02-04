@@ -1,4 +1,4 @@
-import './App.css'
+import './style.css'
 import Lixeira from '../../assets/excluir.png'
 
 //TODO Sempre Lembre do Todo, você vai usar muito ele ainda!!
@@ -18,7 +18,7 @@ function App() {
       nome: "Leandro",
       email: "Leandro@gmail.com"
     },{
-      id: 'dadawdw123',
+      id: 'asdqw1365',
       idade: 34,
       nome: "Carla",
       email: "Carla@gmail.com"
@@ -34,18 +34,19 @@ function App() {
       <div className='Container'>
         <form >
           <h1>Cadastro de Usuários</h1>
-          <input name="nome" type="text"/>
-          <input name="idade" type='number'/>
-          <input name="email" type='email'/>
+          <input name="nome" placeholder='Nome: Gustavo ' type="text"/>
+          <input name="idade" placeholder='Idade: 33' type='number'/>
+          <input name="email" placeholder='Email: Gu@gmail.com' type='email'/>
+          <button>Cadastrar</button>
         </form>
 
         <div>
           {users.map((user)=>(
-            <div key={user.id}>
+            <div key={user.id} className='card'>
             <div>
-              <p>Nome: {user.nome}</p>
-              <p>Idade: {user.idade}</p>
-              <p>Email: {user.email}</p>
+              <p>Nome: <span>{user.nome}</span></p>
+              <p>Idade: <span>{user.idade}</span></p>
+              <p>Email: <span>{user.email}</span></p>
             </div>
             <button>
               <img src={Lixeira} alt="excluir" />
